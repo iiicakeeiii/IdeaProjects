@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void readData(const vector<string>&, const string&);
+void readData(vector<string>&, const string&);
 void displayData();
 
 int main() {
@@ -14,7 +14,7 @@ int main() {
 	readData(restaurantData, fileName);
 }//end main();
 
-void readData(const vector<string>& restaurantData, const string& fileName) {
+void readData(vector<string>& restaurantData, const string& fileName) {
 	ifstream infile(fileName);
 	string line = "";
 
@@ -28,7 +28,7 @@ void readData(const vector<string>& restaurantData, const string& fileName) {
 		getline(infile, line);
 		restaurantData.push_back(line);
 	}//end while;
-	cin.ignore();
+	cin.clear();
 
 	int size = restaurantData.size();
 	for (int i = 0; i < size; i++) {
