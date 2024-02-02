@@ -28,10 +28,11 @@ vector<string> readData(const string& fileName) {
         restaurantData.push_back(line);
 
     }//end while;
+
     cin.clear();
     infile.close();
-
     return restaurantData;
+
 }//end readData();
 
 /**
@@ -53,7 +54,8 @@ void displayTotal(const string& restaurant, const string& server,
     cout << "Tip Percentage: " << tipPercentage << "%" << endl;
     cout << "Total Amount: " << total << endl;
     cin.clear();
-}
+
+}//end displayTotal();
 
 /**
  * Prompts the user for a tip percentage and returns the entered value as an integer.
@@ -66,7 +68,8 @@ double getTip(string prompt) {
     cout << prompt;
     getline(cin, temp);
 
-    return stoi(temp);
+    return stod(temp);
+
 }//end getTip()
 
 /**
@@ -81,6 +84,7 @@ string getServer(string prompt) {
     getline(cin, str);
 
     return str;
+
 }//end getServer()
 
 /**
@@ -95,6 +99,7 @@ double getBill(string prompt) {
     getline(cin, temp);
 
     return stod(temp);
+
 }//end getBill()
 
 /**
@@ -109,6 +114,7 @@ string getRestaurant(string prompt) {
     getline(cin, str);
 
     return str;
+
 }// end getRestaurant()
 
 /**
@@ -119,19 +125,24 @@ string getRestaurant(string prompt) {
  */
 double calcTotal(double bill, double tipPercentage) {
 
-    return 2 * bill * (tipPercentage * .01);
-    /*
-     *  2bt
-     * */
+    return bill + (bill * tipPercentage);
+
 }//end calcTotal()
 
+/**
+ * Displays the restaurant data and total amount including tip.
+ * @param restaurantData A vector containing restaurant-related data, including name,
+ *                      server, bill, and tip percentage.
+ * @param total         The total amount including tip.
+ */
 void displayData(const vector<string>& restaurantData, const double& total) {
 
     cout << "Restaurant: " << restaurantData.at(0) << endl;
     cout << "Server: " << restaurantData.at(1) << endl;
     cout << "Bill: " << stod(restaurantData.at(2)) << endl;
-    cout << "Tip Percentage: " << stoi(restaurantData.at(3)) << "%" << endl;
+    cout << "Tip Percentage: " << stod(restaurantData.at(3)) << "%" << endl;
     cout << "Total Amount: " << total << endl;
 
     cin.clear();
-}
+
+}//displayData();

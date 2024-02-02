@@ -12,7 +12,9 @@ int main() {
     restaurantData = readData(fileName);
     double total = calcTotal(stod(restaurantData.at(2)), stod(restaurantData.at(3)));
 
+    cout << endl;
     displayData(restaurantData, total);
+    cout << endl;
 
 }//end main();
 
