@@ -1,11 +1,11 @@
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <vector>
 
 using namespace std;
 
 void readData(vector<string>&, const string&);
+
 void displayData();
 
 int main() {
