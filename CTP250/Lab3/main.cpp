@@ -24,9 +24,7 @@ int main()
     myArr3.displayArray();
 
     cout <<"Maximum integer: " << myArr.maximumElement() << endl;
-
     cout <<"Maximum double: " << myArr2.maximumElement() << endl;
-
     cout <<"Maximum character: " << myArr3.maximumElement() << endl;
     return 0;
 }
