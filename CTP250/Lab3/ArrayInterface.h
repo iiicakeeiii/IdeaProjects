@@ -11,9 +11,10 @@ public:
     virtual void printReverse() = 0;
     virtual bool find(T) = 0;
     virtual bool isFull() = 0;
+    virtual void fillRemaining() = 0;
     virtual void add(T) = 0;
 	virtual void removeLast() = 0;
     virtual bool remove(T) = 0;
-    virtual int getSize(T []) = 0;
+    virtual int getSize() = 0;
     
 };

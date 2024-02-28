@@ -1,0 +1,5 @@
+.env
+prisma
+look for an api key
+spoonacular.com??
+DATABASE_URL= within .env
